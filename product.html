@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hairnic - Single Product Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script>
+        // Fungsi untuk menambahkan item ke keranjang
+        function addToCart(productName, productPrice, productImage) {
+            // Ambil data keranjang yang sudah ada (jika ada), jika belum ada buat array baru
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            // Buat objek produk yang akan ditambahkan
+            const product = {
+                name: productName,
+                price: productPrice,
+                image: productImage
+            };
+    
+            // Tambahkan produk ke array keranjang
+            cart.push(product);
+    
+            // Simpan array keranjang ke localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+    
+            // Arahkan ke halaman keranjang setelah menambah produk
+            window.location.href = 'cart.html';
+        }
+    </script>  
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a href="index.html" class="navbar-brand">
+                    <h2 class="text-black">CahyaaArt</h2>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="product.html" class="nav-item nav-link">Products</a>
+                        <a href="cart.html" class="nav-item nav-link">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                        </a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary hero-header mb-5">
+        <div class="container text-center">
+            <h1 class="display-4 text-black mb-3 animated slideInDown">Products</h1>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Product Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="text-black mb-3">CahyaaArt Product</h1>
+                <p class="text-muted mb-4">Temukan koleksi produk eksklusif kami yang dirancang untuk menambah keindahan dan kenyamanan di setiap momen. Dari dekorasi hingga hadiah, setiap produk kami dibuat dengan cinta dan perhatian terhadap detail.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Product Item 1 -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="product-item text-center border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/Flowerbox2.png" alt="">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small>(99)</small>
+                        </div>
+                        <a href="#" class="h6 d-inline-block mb-2">Flower Box</a>
+                        <h5 class="text-purple mb-3">Rp. 85000</h5>
+                        <!-- Button to trigger modal -->
+                        <a href="#" class="btn btn-outline-primary px-3" data-bs-toggle="modal" data-bs-target="#productModal1">View Detail</a>
+                    </div>
+                </div>
+    
+                <!-- Product Item 2 -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="product-item text-center border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/FlowerrBox.png" alt="">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small>(99)</small>
+                        </div>
+                        <a href="#" class="h6 d-inline-block mb-2">Flower Box</a>
+                        <h5 class="text-purple mb-3">Rp. 85000</h5>
+                        <!-- Button to trigger modal -->
+                        <a href="#" class="btn btn-outline-primary px-3" data-bs-toggle="modal" data-bs-target="#productModal2">View Detail</a>
+                    </div>
+                </div>
+            
+                <!-- Product Item 3 -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="product-item text-center border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/FlowerBox3.png" alt="Papan Akrilik">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small>(99)</small>
+                        </div>
+                        <a href="#" class="h6 d-inline-block mb-2">Flower Box</a>
+                        <h5 class="text-purple mb-3">Rp. 85000</h5>
+                        <!-- Button to trigger modal -->
+                        <a href="#" class="btn btn-outline-primary px-3" data-bs-toggle="modal" data-bs-target="#productModal2">View Detail</a>
+                    </div>
+                </div>
+
+                <!-- Product Item 4 -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="product-item text-center border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/FlowerBox4.png" alt="Papan Akrilik">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small>(99)</small>
+                        </div>
+                        <a href="#" class="h6 d-inline-block mb-2">Flower Box</a>
+                        <h5 class="text-purple mb-3">Rp. 85000</h5>
+                        <!-- Button to trigger modal -->
+                        <a href="#" class="btn btn-outline-primary px-3" data-bs-toggle="modal" data-bs-target="#productModal2">View Detail</a>
+                    </div>
+                </div>
+
+                <!-- Product Item 5 -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="product-item text-center border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/Akrilik4.png" alt="Hair Growing Shampoo">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small>(99)</small>
+                        </div>
+                        <a href="#" class="h6 d-inline-block mb-2">Papan Akrilik</a>
+                        <h5 class="text-purple mb-3">Rp. 75000</h5>
+                        <!-- Button to trigger modal -->
+                        <a href="#" class="btn btn-outline-primary px-3" data-bs-toggle="modal" data-bs-target="#productModal3">View Detail</a>
+                    </div>
+                </div>
+
+                <!-- Product Item 6 -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="product-item text-center border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/Akrilik1.png" alt="Papan Akrilik">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small>(99)</small>
+                        </div>
+                        <a href="#" class="h6 d-inline-block mb-2">Papan Akrilik</a>
+                        <h5 class="text-purple mb-3">Rp. 75000</h5>
+                        <!-- Button to trigger modal -->
+                        <a href="#" class="btn btn-outline-primary px-3" data-bs-toggle="modal" data-bs-target="#productModal3">View Detail</a>
+                    </div>
+                </div>
+                 
+                <!-- Product Item 7 -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="product-item text-center border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/Akrilik2.png" alt="Papan Akrilik">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small>(99)</small>
+                        </div>
+                        <a href="#" class="h6 d-inline-block mb-2">Papan Akrilik</a>
+                        <h5 class="text-purple mb-3">Rp. 75000</h5>
+                        <!-- Button to trigger modal for product 4 -->
+                        <a href="#" class="btn btn-outline-primary px-3" data-bs-toggle="modal" data-bs-target="#productModal4">View Detail</a>
+                    </div>
+                </div>
+
+                <!-- Product Item 8 -->
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="product-item text-center border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/Akrilik3.png" alt="Akrilik3">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small class="fa fa-star text-purple"></small>
+                            <small>(99)</small>
+                        </div>
+                        <a href="#" class="h6 d-inline-block mb-2">Papan Akrilik</a>
+                        <h5 class="text-purple mb-3">Rp. 75000</h5>
+                        <!-- Button to trigger modal -->
+                        <a href="#" class="btn btn-outline-primary px-3" data-bs-toggle="modal" data-bs-target="#productModal3">View Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product End -->
+
+    <!-- Modal for Product 1 -->
+    <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel1">Flower Box</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="img/Flowerbox2.png" alt="Flower Box">
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Flower Box</h5>
+                            <p><strong>Price:</strong> Rp. 85000</p>
+                            <p><strong>Description:</strong> Flowerbox kami adalah pilihan sempurna untuk menambah keindahan dan kesan elegan pada setiap acara Anda. Terbuat dari bahan berkualitas, dihias dengan bunga akrilik yang memukau.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Flower Box', 'Rp. 85.000', 'img/Flowerbox2.png')">Add to Cart</button>
+                            <a href="https://app.sandbox.midtrans.com/payment-links/1733286128849" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal for Product 2 -->
+    <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel2">Flower Box</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="img/FlowerrBox.png" alt="Flower Box">
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Flower Box</h5>
+                            <p><strong>Price:</strong> Rp. 85000</p>
+                            <p><strong>Description:</strong> Flowerbox eksklusif kami menambah sentuhan warna dan keindahan pada setiap ruangan. Dihias dengan bunga buatan yang tampak seperti asli.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Flower Box', 'Rp. 85.000', 'img/FlowerrBox.png')">Add to Cart</button>
+                            <a href="https://app.sandbox.midtrans.com/payment-links/1733286128849" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Product 3 -->
+    <div class="modal fade" id="productModal10" tabindex="-1" aria-labelledby="productModalLabel10" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel10">Papan Akrilik</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="img/FlowerBox3.png" alt="Papan Akrilik">
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Flower Box</h5>
+                            <p><strong>Price:</strong> Rp. 85000</p>
+                            <p><strong>Description:</strong> Flowerbox eksklusif kami menambah sentuhan warna dan keindahan pada setiap ruangan. Dihias dengan bunga buatan yang tampak seperti asli.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Flower Box', 'Rp. 85.000', 'img/FlowerBox3.png')">Add to Cart</button>
+                            <a href="https://app.sandbox.midtrans.com/payment-links/1733286128849" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Product 4 -->
+    <div class="modal fade" id="productModal11" tabindex="-1" aria-labelledby="productModalLabel11" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel11>Papan Akrilik</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="img/FlowerBox4.png" alt="Papan Akrilik">
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Papan Akrilik</h5>
+                            <p><strong>Price:</strong> Rp. 75000</p>
+                            <p><strong>Description:</strong> Papan akrilik berkualitas tinggi untuk display produk, acara, dan dekorasi.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Flower Box', 'Rp. 85.000', 'img/FlowerBox4.png')">Add to Cart</button>
+                            <a href="https://app.sandbox.midtrans.com/payment-links/1733286128849" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Product 5 -->
+    <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel5">Hair Growing Shampoo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="img/Akrilik4.png" alt="Hair Growing Shampoo">
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Hair Growing Shampoo</h5>
+                            <p><strong>Price:</strong> Rp. 75000</p>
+                            <p><strong>Description:</strong> Shampoo pertumbuhan rambut dengan bahan alami yang dapat merangsang pertumbuhan rambut dan mengurangi kerontokan.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Flower Box', 'Rp. 75.000', 'img/Akrilik4.png')">Add to Cart</button>
+                            <a href="https://app.sandbox.midtrans.com/payment-links/1733286210122" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Product 6 -->
+    <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel3">Papan Akrilik</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="img/Akrilik1.png" alt="Papan Akrilik">
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Papan Akrilik</h5>
+                            <p><strong>Price:</strong> Rp. 75000</p>
+                            <p><strong>Description:</strong> Papan akrilik berkualitas tinggi untuk display produk, acara, dan dekorasi.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Flower Box', 'Rp. 75.000', 'img/Akrilik1.png')">Add to Cart</button>
+                            <a href="https://app.sandbox.midtrans.com/payment-links/1733286210122" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Product 7 -->
+    <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel4">Papan Akrilik</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="img/Akrilik2.png" alt="Papan Akrilik">
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Papan Akrilik</h5>
+                            <p><strong>Price:</strong> Rp. 75000</p>
+                            <p><strong>Description:</strong> Papan akrilik berkualitas tinggi untuk display produk, acara, dan dekorasi.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Flower Box', 'Rp. 75.000', 'img/Akrilik2.png')">Add to Cart</button>
+                            <a href="https://app.sandbox.midtrans.com/payment-links/1733286210122" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Product 8 -->
+    <div class="modal fade" id="productModal8" tabindex="-1" aria-labelledby="productModalLabel8" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel8">Akrilik 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="img/Akrilik3.png" alt="Akrilik 3">
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Akrilik 3</h5>
+                            <p><strong>Price:</strong> Rp. 85,000</p>
+                            <p><strong>Description:</strong> Produk akrilik berkualitas tinggi, sempurna untuk kebutuhan dekorasi dan presentasi produk Anda.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Flower Box', 'Rp. 75.000', 'img/Akrilik3.png')">Add to Cart</button>
+                            <a href="https://app.sandbox.midtrans.com/payment-links/1733286210122" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(name, price, image) {
+            // Simpan data produk ke localStorage
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ name, price, image, quantity: 1 });
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(name + " added to cart!");
+            // Redirect ke halaman cart
+            window.location.href = "cart.html";
+        }
+       </script>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-white footer">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <h1 class="text-black">CahyaaArt</h1>
+                    </a>
+                    <p class="mb-0">Sewa papan akrilik dan flowerbox untuk berbagai kebutuhan acara Anda. Desain elegan dan praktis, 
+                        memberikan kesan modern pada setiap momen spesial. Solusi sempurna untuk display produk, dekorasi pernikahan, 
+                        hingga event komersial</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Palopo</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>087750232912</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-primary me-1" href="https://www.instagram.com/cahyaaa_art/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <h5 class="mb-4">Our Products</h5>
+                    <a class="btn btn-link" href="">Flower Box</a>
+                    <a class="btn btn-link" href="">Papan Akrilik</a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="mb-4">Popular Link</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">CahyaaArt</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
