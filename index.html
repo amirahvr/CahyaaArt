@@ -14,9 +14,13 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<<<<<<< HEAD
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap"
         rel="stylesheet">
+=======
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap" rel="stylesheet">
+>>>>>>> 59cc78c (perbarui)
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -25,6 +29,10 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<<<<<<< HEAD
+=======
+    <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+>>>>>>> 59cc78c (perbarui)
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -32,18 +40,35 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">   
 
+<<<<<<< HEAD
+=======
+</head>
+
+<body>
+
+    <!-- Konten halaman lainnya -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+>>>>>>> 59cc78c (perbarui)
     <script>
         // Fungsi untuk menambahkan item ke keranjang
         function addToCart(productName, productPrice, productImage) {
             // Ambil data keranjang yang sudah ada (jika ada), jika belum ada buat array baru
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 59cc78c (perbarui)
             // Buat objek produk yang akan ditambahkan
             const product = {
                 name: productName,
                 price: productPrice,
                 image: productImage
             };
+<<<<<<< HEAD
     
             // Tambahkan produk ke array keranjang
             cart.push(product);
@@ -56,6 +81,31 @@
         }
     </script> 
 </head>
+=======
+
+            // Tambahkan produk ke array keranjang
+            cart.push(product);
+
+            // Simpan array keranjang ke localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Arahkan ke halaman keranjang setelah menambah produk
+            window.location.href = 'cart.html';
+        }
+
+        // Inisialisasi Owl Carousel
+        $(document).ready(function() {
+            $(".testimonial-carousel").owlCarousel({
+                items: 1,  // Menampilkan satu item per slide
+                loop: true,  // Mengulangi carousel
+                autoplay: true,  // Otomatis berputar
+                autoplayTimeout: 5000,  // Waktu perputaran otomatis
+                dots: true,  // Menampilkan indikator titik
+                nav: true  // Menampilkan tombol navigasi
+            });
+        });
+    </script>
+>>>>>>> 59cc78c (perbarui)
 
 <body>
     <!-- Spinner Start -->
@@ -82,12 +132,19 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
+<<<<<<< HEAD
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="product.html" class="nav-item nav-link">Products</a>
                         <a href="cart.html" class="nav-item nav-link">
                             <i class="fas fa-shopping-cart"></i> Cart
                         </a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
+=======
+                        <a href="product.html" class="nav-item nav-link">Products</a>
+                        <a href="cart.html" class="nav-item nav-link">
+                            <i class="fas fa-shopping-cart"></i> 
+                        </a>
+>>>>>>> 59cc78c (perbarui)
                     </div>
                 </div>
             </nav>
@@ -346,7 +403,11 @@
             <!-- Product Item 1 -->
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                 <div class="product-item text-center border h-100 p-4">
+<<<<<<< HEAD
                     <img class="img-fluid mb-4" src="img/Flowerbox2.png" alt="">
+=======
+                    <img class="img-fluid mb-4" src="img/Flowerbox2.png" alt="Flower Box Papan Ucapan">
+>>>>>>> 59cc78c (perbarui)
                     <div class="mb-2">
                         <small class="fa fa-star text-purple"></small>
                         <small class="fa fa-star text-purple"></small>
@@ -365,7 +426,11 @@
             <!-- Product Item 2 -->
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                 <div class="product-item text-center border h-100 p-4">
+<<<<<<< HEAD
                     <img class="img-fluid mb-4" src="img/FlowerrBox.png" alt="">
+=======
+                    <img class="img-fluid mb-4" src="img/FlowerrBox.png" alt="Flower Box Papan Ucapan">
+>>>>>>> 59cc78c (perbarui)
                     <div class="mb-2">
                         <small class="fa fa-star text-purple"></small>
                         <small class="fa fa-star text-purple"></small>
@@ -384,7 +449,11 @@
             <!-- Product Item 3 -->
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                 <div class="product-item text-center border h-100 p-4">
+<<<<<<< HEAD
                     <img class="img-fluid mb-4" src="img/Akrilik1.png" alt="Papan Akrilik">
+=======
+                    <img class="img-fluid mb-4" src="img/Akrilik1.png" alt="Papan Akrilik Ucapan">
+>>>>>>> 59cc78c (perbarui)
                     <div class="mb-2">
                         <small class="fa fa-star text-purple"></small>
                         <small class="fa fa-star text-purple"></small>
@@ -404,7 +473,11 @@
             <!-- Product Item 4 -->
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                 <div class="product-item text-center border h-100 p-4">
+<<<<<<< HEAD
                     <img class="img-fluid mb-4" src="img/Akrilik2.png" alt="Papan Akrilik">
+=======
+                    <img class="img-fluid mb-4" src="img/Akrilik2.png" alt="Papan Akrilik Ucapan">
+>>>>>>> 59cc78c (perbarui)
                     <div class="mb-2">
                         <small class="fa fa-star text-purple"></small>
                         <small class="fa fa-star text-purple"></small>
@@ -420,6 +493,13 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+
+        <div class="text-center mt-4">
+            <a href="product.html" class="btn btn-primary py-2 px-4">Lihat Selengkapnya</a>
+        </div>
+>>>>>>> 59cc78c (perbarui)
     </div>
 </div>
 <!-- Product End -->
@@ -435,7 +515,11 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
+<<<<<<< HEAD
                             <img class="img-fluid" src="img/Flowerbox2.png" alt="Flower Box">
+=======
+                            <img class="img-fluid" src="img/Flowerbox2.png" alt="Flower Box Papan Ucapan">
+>>>>>>> 59cc78c (perbarui)
                         </div>
                         <div class="col-md-6">
                             <h5>Flower Box</h5>
@@ -463,7 +547,11 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
+<<<<<<< HEAD
                             <img class="img-fluid" src="img/FlowerrBox.png" alt="Flower Box">
+=======
+                            <img class="img-fluid" src="img/FlowerrBox.png" alt="Flower Box Papan Ucapan">
+>>>>>>> 59cc78c (perbarui)
                         </div>
                         <div class="col-md-6">
                             <h5>Flower Box</h5>
@@ -489,7 +577,11 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
+<<<<<<< HEAD
                             <img class="img-fluid" src="img/Akrilik1.png" alt="Papan Akrilik">
+=======
+                            <img class="img-fluid" src="img/Akrilik1.png" alt="Papan Akrilik Ucapan">
+>>>>>>> 59cc78c (perbarui)
                         </div>
                         <div class="col-md-6">
                             <h5>Papan Akrilik</h5>
@@ -515,7 +607,11 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
+<<<<<<< HEAD
                             <img class="img-fluid" src="img/Akrilik2.png" alt="Papan Akrilik">
+=======
+                            <img class="img-fluid" src="img/Akrilik2.png" alt="Papan Akrilik Ucapan">
+>>>>>>> 59cc78c (perbarui)
                         </div>
                         <div class="col-md-6">
                             <h5>Papan Akrilik</h5>
@@ -543,6 +639,86 @@
         }
        </script>
 
+<<<<<<< HEAD
+=======
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial bg-primary my-5 py-5">
+        <div class="container text-black py-5">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="text-black mb-3">Our Customer Said <span class="fw-light text-dark">About Our Product</span></h1>
+                <p class="mb-5">Simak testimoni dari pelanggan yang puas dengan papan akrilik bunga ucapan kami</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.1s">
+                        <div class="testimonial-item text-center" data-dot="1">
+                            <img class="img-fluid border p-2" src="img/OTW RENANG.png" alt="">
+                            <h5 class="fw-light lh-base text-black">Papan bunga akrilik yang saya sewa dari CahyaaArtbenar-benar mempercantik acara saya! Desainnya elegan dan tulisan ucapan terlihat jelas, sangat memuaskan!"</h5>
+                            <h5 class="mb-1">Rezly Atul</h5>
+                        </div>
+                        <div class="testimonial-item text-center" data-dot="2">
+                            <img class="img-fluid border p-2" src="img/alvin.png" alt="">
+                            <h5 class="fw-light lh-base text-black">Flowerbox yang dari CahyaaArt memberikan sentuhan manis dan personal pada acara ulang tahun saya. Terimakasih atas layanan yang cepat dan hasil yang memuaskan!</h5>
+                            <h5 class="mb-1">Alvin</h5>
+                        </div>
+                        <div class="testimonial-item text-center" data-dot="3">
+                            <img class="img-fluid border p-2" src="img/rifky.png" alt="">
+                            <h5 class="fw-light lh-base text-black">Kami memilih papan bunga akrilik untuk acara pernikahan kami dan hasilnya luar biasa! Papan bunga yang kokoh dan desain yang modern membuat suasana acara semakin istimewa.</h5>
+                            <h5 class="mb-1">Rifky</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Contact Info Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Office Address -->
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="contact-info-item position-relative bg-primary text-center p-3">
+                        <div class="border py-5 px-3">
+                            <a href="https://www.instagram.com/cahyaaa_art" target="_blank">
+                                <i class="fab fa-instagram fa-3x text-dark mb-4"></i>
+                                <h5 class="text-black">@cahyaaa_art</h5>
+                            </a>
+                        </div>                        
+                    </div>
+                </div>
+    
+                <!-- Call Us -->
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="contact-info-item position-relative bg-primary text-center p-3">
+                        <div class="border py-5 px-3">
+                            <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.wizard.id%2Fe8f3bd%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaZzfsvef97shwCpIK1eB8P-YMB5to1mFcejSR42_IB_-LEPo3nNcfdIugk_aem_Jse9_3UUvuZRZWpXLax8dg&e=AT2iRjAtcIjUkFcv2uhSSl0brCfTvKuYk5fAPz6emrlwoUMeRePISWFE_RbuX7Hr9kfioUE1rPIdI3WmJdDRaQWNhUAhc5uR3GSyR2s" target="_blank">
+                                <i class="fa fa-phone-alt fa-3x text-dark mb-4"></i>
+                                <h5 class="text-black">087750232912</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- owner -->
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="contact-info-item position-relative bg-primary text-center p-3">
+                        <div class="border py-5 px-3">
+                            <a href="https://www.instagram.com/_indahcahyaniii_/" target="_blank">
+                                <i class="fab fa-instagram fa-3x text-dark mb-4"></i>
+                                <h5 class="text-black">@_indahcahyaniii_</h5>
+                            </a>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!-- Contact Info End -->
+
+>>>>>>> 59cc78c (perbarui)
         
 <!-- Footer Start -->
 <div class="container-fluid bg-white footer">
